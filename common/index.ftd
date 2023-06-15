@@ -1,0 +1,84 @@
+-- integer logo-width: 24
+
+-- integer logo-height: 24
+
+-- string site-name: SET 2 DS
+
+-- string site-url: index.html
+
+-- ftd.image-src site-logo: $assets.files.assets.ipsum-logo.svg
+
+
+
+
+
+-- record tags-list:
+caption title:
+string tag-link:
+
+-- tags-list list topic-lists:
+
+-- tags-list: Lorem1
+tag-link: /
+
+-- tags-list: Lorem2
+tag-link: /
+
+-- tags-list: Lorem3
+tag-link: /
+
+-- tags-list: Lorem4
+tag-link: /
+
+-- tags-list: Lorem5
+tag-link: /
+
+-- tags-list: Lorem6
+tag-link: /
+
+-- end: topic-lists
+
+
+
+
+
+-- record author-meta:
+optional caption title:
+optional string profile:
+optional string company:
+optional string bio-url:
+optional ftd.image-src image:
+optional body body:
+
+-- record post-meta:
+optional caption title: 
+optional string timestamp:
+optional string tag:
+optional ftd.image-src post-image:
+optional body body:
+optional string post-url:
+optional author-meta author:
+
+
+
+
+
+-- social-media list share-links:
+
+-- social-media:
+link: /
+src: $assets.files.static.meta.svg
+
+-- social-media: 
+link: /
+src: $assets.files.static.figma.svg
+
+-- social-media:
+link: /
+src: $assets.files.static.google.svg
+
+-- social-media: 
+link: /
+src: $assets.files.static.ball.svg
+
+-- end: share-links

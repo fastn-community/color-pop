@@ -1,0 +1,182 @@
+-- import: fastn-community.github.io/color-pop/common
+-- import: fastn-community.github.io/color-pop as blog
+-- import: fastn-community.github.io/color-pop/blog-authors/patrica as author
+
+-- common.post-meta meta: Lorem ipsum dolor sit amet. Est voluptatem esse
+tag: Lorem ipsum
+author: $author.patrica
+timestamp: May 18, 6 min
+post-image: $assets.files.assets.post1.jpg
+post-url: /blog-articles/sample-post-1/
+
+-- common.post-meta meta1: Quo praesentium sapiente vel soluta assumenda et
+tag: Lorem ipsum
+author: $author.patrica
+timestamp: May 18, 6 min
+post-image: $assets.files.assets.post1.jpg
+post-url: /blog-articles/sample-post-1/
+
+-- common.post-meta meta2: Eos libero natus est minima laudantium
+tag: Lorem ipsum
+author: $author.patrica
+timestamp: May 18, 6 min
+post-image: $assets.files.assets.post2.jpg
+post-url: /blog-articles/sample-post-1/
+
+
+
+
+
+-- my-ds.page:
+blog: true
+sidebar: true
+
+-- my-ds.page.right-sidebar:
+
+-- ds.link: Table Of Content:
+cta: /
+
+-- ds.link-group: Working remotely as a digital nomad in Honduras
+cta: /blog-articles/sample-post-1/#work
+
+-- ds.link-group: Roatan Island as a digital nomad base
+cta: /blog-articles/sample-post-1/#roatan
+
+-- ds.link-group: Coworking in Roatan
+cta: /blog-articles/sample-post-1/#coworking
+
+-- ds.link-group: Wrap-Up: Life as a Digital Nomad in Roatan
+cta: /blog-articles/sample-post-1/#wrap-up
+
+-- end: my-ds.page.right-sidebar
+
+-- blog.post:
+meta: $meta
+
+-- ds.markdown:
+
+Lorem ipsum dolor sit amet. Est voluptatem esse ea repellat facere ut itaque
+labore ex quaerat error et distinctio reiciendis? Quo praesentium sapiente vel
+soluta assumenda et omnis doloremque est beatae voluptatem! 
+
+-- ds.h2: Working remotely as a digital nomad in Honduras
+id: work
+
+-- ds.markdown:
+
+Ad quam tenetur est repellendus dicta vel voluptas omnis ut alias galisum! In
+laborum animi eum repellat ullam non temporibus delectus.Eos libero natus est
+minima laudantium hic dolor maxime et necessitatibus voluptatem. Sed
+accusantium magnam sed earum voluptatum quo mollitia voluptatem quo provident
+aliquid. Ad quam tenetur est repellendus dicta vel voluptas omnis ut alias
+galisum! In laborum animi eum repellat ullam non temporibus delectus.Eos libero
+natus est minima laudantium hic dolor maxime et necessitatibus voluptatem. Sed
+accusantium magnam sed earum voluptatum quo mollitia voluptatem quo provident
+aliquid.
+
+-- ds.h2: Roatan Island as a digital nomad base
+id: roatan
+
+-- ds.markdown:
+
+Ad quam tenetur est repellendus dicta vel voluptas omnis ut alias galisum! In
+laborum animi eum repellat ullam non temporibus delectus.Eos libero natus est
+minima laudantium hic dolor maxime et necessitatibus voluptatem. Sed
+accusantium magnam sed earum voluptatum quo mollitia voluptatem quo provident
+aliquid. Ad quam tenetur est repellendus dicta vel voluptas omnis ut alias
+galisum! 
+
+In laborum animi eum repellat ullam non temporibus delectus.Eos libero
+natus est minima laudantium hic dolor maxime et necessitatibus voluptatem. Sed
+accusantium magnam sed earum voluptatum quo mollitia voluptatem quo provident
+aliquid.
+
+Quo praesentium sapiente vel soluta assumenda et omnis doloremque est beatae
+voluptatem! Eum delectus dolorum et animi consectetur est asperiores tempore
+rem inventore nihil.Quo praesentium sapiente vel soluta assumenda et omnis
+doloremque est beatae voluptatem! Eum delectus dolorum et animi consectetur est
+asperiores tempore rem inventore nihil.Quo praesentium sapiente vel soluta
+assumenda et omnis doloremque est beatae voluptatem! Eum delectus dolorum et
+animi consectetur est asperiores tempore rem inventore nihil.
+
+-- ds.code:
+lang: ftd
+
+\-- import: fastn-community.github.io/set-2-ds as ds
+
+\-- ds.page: Page title
+site-logo: $assets.files.static.ipsum-logo.svg
+site-name: NULL
+
+-- ds.markdown:
+
+`Activities in Roatan`
+
+Ad quam tenetur est repellendus dicta vel voluptas omnis ut alias galisum! In
+laborum animi eum repellat ullam non temporibus delectus.Eos libero natus est
+minima laudantium hic dolor maxime et necessitatibus voluptatem. Sed
+accusantium magnam sed earum voluptatum quo mollitia voluptatem quo provident
+aliquid. Ad quam tenetur est repellendus dicta vel voluptas omnis ut alias
+galisum! 
+
+In laborum animi eum repellat ullam non temporibus delectus.Eos libero
+natus est minima laudantium hic dolor maxime et necessitatibus voluptatem. Sed
+accusantium magnam sed earum voluptatum quo mollitia voluptatem quo provident
+aliquid.
+
+-- ds.h2: Coworking in Roatan
+id: coworking
+
+-- ds.markdown:
+
+In laborum animi eum repellat ullam non temporibus delectus.Eos libero
+natus est minima laudantium hic dolor maxime et necessitatibus voluptatem. Sed
+accusantium magnam sed earum voluptatum quo mollitia voluptatem quo provident
+aliquid.
+
+-- ds.code:
+lang: ftd
+
+\-- import: fastn-community.github.io/set-2-ds as ds
+
+\-- ds.page: Page title
+site-logo: $assets.files.static.ipsum-logo.svg
+site-name: NULL
+-- ds.markdown:
+
+Along with fast Wifi and great amenities, Beach Desk had incredible views of the
+Ad quam tenetur est repellendus dicta vel voluptas omnis ut alias galisum! In
+laborum animi eum repellat ullam non temporibus delectus.Eos libero natus est
+minima laudantium hic dolor maxime et necessitatibus voluptatem. Sed
+accusantium magnam sed earum voluptatum quo mollitia voluptatem quo provident
+aliquid. Ad quam tenetur est repellendus dicta vel voluptas omnis ut alias
+galisum! Ad quam tenetur est repellendus dicta vel voluptas omnis ut alias
+galisum! In laborum animi eum repellat ullam non temporibus delectus.Eos libero
+natus est minima laudantium hic dolor maxime et necessitatibus voluptatem. Sed
+accusantium magnam sed earum voluptatum quo mollitia voluptatem quo provident
+aliquid. Ad quam tenetur est repellendus dicta vel voluptas omnis ut alias
+galisum!
+
+-- ds.h2: Wrap-Up: Life as a Digital Nomad in Roatan
+id: wrap-up
+
+-- ds.code:
+lang: ftd
+
+\-- import: fastn-community.github.io/set-2-ds as ds
+
+\-- ds.page: Page title
+site-logo: $assets.files.static.ipsum-logo.svg
+site-name: NULL
+
+-- ds.markdown:
+
+Quo praesentium sapiente vel soluta assumenda et omnis doloremque est beatae
+voluptatem! Eum delectus dolorum et animi consectetur est asperiores tempore
+rem inventore nihil.Quo praesentium sapiente vel soluta assumenda et omnis
+doloremque est beatae voluptatem! Eum delectus dolorum et animi consectetur est
+asperiores tempore rem inventore nihil.Quo praesentium sapiente vel soluta
+assumenda et omnis doloremque est beatae voluptatem! Eum delectus dolorum et
+animi consectetur est asperiores tempore rem inventore nihil.
+
+-- end: my-ds.page

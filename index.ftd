@@ -1,40 +1,370 @@
--- my-ds.page: Welcome to doc-site
+-- import: fastn-community.github.io/color-pop/common
+-- import: fastn-community.github.io/color-pop/blog-articles/sample-post-1
 
 
-⚡️ `doc-site` will help you create a beautiful documentation site in no time.
-
-It provides out-of-the-box documentation features that can be used to create any
-kind of site(personal website, blog, etc).
-
-[Click here](https://fastn-community.github.io/doc-site/) to read doc-site
-documentation.
-
--- ds.h3: 🚀 Fast Track 
-
-Create your first fastn [web-site](https://fastn.com/expander/hello-world/-/build/) 
-project in just 5 minutes!
-
--- ds.h3: 🌟 Whats next?
-
-Create your first page. 
-[Click here to know more](https://fastn-community.github.io/doc-site/page/).
-
--- ds.h3: 👀 Want to learn more?
-
-Feel free to check [our expander course](https://fastn.com/expander/) or jump
-into our [FifthTry Discord server](https://discord.gg/bucrdvptYd).
 
 
--- ds.h3: 🎯 Used by?
 
-Our all documentation sites uses this `doc-site` theme.
+-- my-ds.page:
+full-width: true
+sidebar: false
 
-- [fastn.com](https://fastn.com/home/)
-- [FifthTry.com](https://www.fifthtry.com/)
+-- posts: Blog
 
--- ds.h2: Learn fastn and become a pro?
+-- post-card:
+post-data: $sample-post-1.meta1
 
-You are one click away, just check [our documentation](https://fastn.com/) and 
-dont forget to jump into our [FifthTry Discord server](https://discord.gg/bucrdvptYd).
+-- post-card:
+post-data: $sample-post-1.meta2
+
+-- post-card:
+post-data: $sample-post-1.meta1
+
+-- post-card:
+post-data: $sample-post-1.meta2
+
+-- end: posts
+
 
 -- end: my-ds.page
+
+
+
+
+
+
+
+
+
+
+
+
+-- component posts:
+optional caption title:
+optional body body:
+children container:
+optional string sub-heading:
+
+-- ftd.column:
+width: fill-container
+align-content: center
+
+-- ftd.text: $posts.title
+if: { posts.title != NULL }
+role: $inherited.types.heading-medium
+color: $inherited.colors.text-strong
+
+-- ftd.desktop:
+
+-- ftd.row:
+children: $posts.container
+wrap: true
+spacing.fixed.px: 32
+
+-- end: ftd.row
+
+-- end: ftd.desktop
+
+-- ftd.mobile:
+
+-- ftd.column:
+children: $posts.container
+spacing.fixed.px: 16
+
+-- end: ftd.column
+
+-- end: ftd.mobile
+
+-- end: ftd.column
+
+-- end: posts
+
+
+
+
+
+
+
+
+
+
+-- component post:
+common.post-meta meta:
+children container:
+
+-- ftd.column:
+width: fill-container
+
+-- article-card: $post.meta.title
+image: $post.meta.post-image
+author: $post.meta.author
+timestamp: $post.meta.timestamp
+tag: $post.meta.tag
+
+-- ftd.column:
+children: $post.container
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: post
+
+
+
+
+
+
+
+
+
+
+-- component article-card:
+caption title:
+optional string timestamp:
+optional common.author-meta author:
+optional ftd.image-src image:
+optional string url:
+optional string tag:
+
+-- ftd.column:
+color: $inherited.colors.text
+role: $inherited.types.copy-regular
+width: fill-container
+align-content: center
+
+-- ftd.text: $article-card.title
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+text-align: center
+
+-- ftd.row:
+if: { article-card.author != NULL }
+padding-vertical.px: 24
+align-content: center
+spacing.fixed.px: 16
+
+-- ftd.text: By
+
+-- ftd.text: $article-card.author.title
+if: { article-card.author.title != NULL }
+
+-- ftd.row:
+border-radius.px: 100
+border-width.px: 1
+border-color: $inherited.colors.text
+background.solid: $inherited.colors.text
+height.fixed.px: 4
+width.fixed.px: 4
+
+-- end: ftd.row
+
+-- ftd.text: $article-card.timestamp
+if: { article-card.timestamp != NULL }
+
+-- end: ftd.row
+
+-- ftd.image:
+if: { article-card.image != NULL }
+src: $article-card.image
+width: fill-container
+height: hug-content
+
+-- end: ftd.column
+
+-- end: article-card
+
+
+
+
+
+
+
+
+
+
+-- component post-card:
+common.post-meta post-data:
+
+-- post-card-ui: $post-card.post-data.title
+timestamp: $post-card.post-data.timestamp
+image: $post-card.post-data.post-image
+author: $post-card.post-data.author
+url: $post-card.post-data.post-url
+tag: $post-card.post-data.tag
+
+-- end: post-card
+
+
+
+
+
+
+
+
+
+
+-- component post-card-ui:
+caption title:
+optional string timestamp:
+optional common.author-meta author:
+optional ftd.image-src image:
+optional string url:
+optional string tag:
+
+-- ftd.column:
+
+-- ftd.desktop:
+
+-- post-card-ui-desktop: $post-card-ui.title
+timestamp: $post-card-ui.timestamp
+image: $post-card-ui.image
+author: $post-card-ui.author
+url: $post-card-ui.url
+tag: $post-card-ui.tag
+
+-- end: ftd.desktop
+
+-- ftd.mobile:
+
+-- post-card-ui-mobile: $post-card-ui.title
+timestamp: $post-card-ui.timestamp
+image: $post-card-ui.image
+author: $post-card-ui.author
+url: $post-card-ui.url
+
+-- end: ftd.mobile
+
+-- end: ftd.column
+
+-- end: post-card-ui
+
+
+
+
+
+
+
+
+
+
+-- component post-card-ui-desktop:
+caption title:
+optional string timestamp:
+optional common.author-meta author:
+optional ftd.image-src image:
+optional string url:
+optional string tag:
+boolean $mouse-in: false
+
+-- ftd.column:
+width.fixed.px: 600
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+margin-top.px: 24
+margin-bottom.px: 32
+spacing.fixed.px: 12
+$on-mouse-enter$: $ftd.set-bool($a = $post-card-ui-desktop.mouse-in, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $post-card-ui-desktop.mouse-in, v = false)
+
+-- ftd.image:
+src: $post-card-ui-desktop.image
+width: fill-container
+border-radius.px: 32
+link: $post-card-ui-desktop.url
+
+-- ftd.text: $post-card-ui-desktop.title
+role: $inherited.types.heading-small
+color: $inherited.colors.text-strong
+link: $post-card-ui-desktop.url
+
+-- ftd.row:
+spacing.fixed.px: 8
+align-content: center
+
+-- ftd.text: by
+
+-- ftd.text: $post-card-ui-desktop.author.title
+
+-- ftd.row:
+border-radius.px: 100
+border-width.px: 1
+border-color: $inherited.colors.text
+background.solid: $inherited.colors.text
+height.fixed.px: 4
+width.fixed.px: 4
+
+-- end: ftd.row
+
+-- ftd.text: $post-card-ui-desktop.timestamp
+if: { post-card-ui-desktop.timestamp != NULL }
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: post-card-ui-desktop
+
+
+
+
+
+
+
+
+
+
+-- component post-card-ui-mobile:
+caption title:
+optional string timestamp:
+optional common.author-meta author:
+optional ftd.image-src image:
+optional string url:
+
+-- ftd.column:
+width.fixed.px: 357
+role: $inherited.types.copy-small
+color: $inherited.colors.text
+margin-top.px: 24
+margin-bottom.px: 32
+spacing.fixed.px: 12
+padding.px: 12
+
+-- ftd.image:
+src: $post-card-ui-mobile.image
+width: fill-container
+height.fixed.px: 220
+border-radius.px: 24
+link: $post-card-ui-mobile.url
+
+-- ftd.text: $post-card-ui-mobile.title
+role: $inherited.types.heading-tiny
+color: $inherited.colors.text-strong
+link: $post-card-ui-mobile.url
+
+-- ftd.row:
+spacing.fixed.px: 8
+align-content: center
+
+-- ftd.text: by
+
+-- ftd.text: $post-card-ui-mobile.author.title
+
+-- ftd.row:
+border-radius.px: 100
+border-width.px: 1
+border-color: $inherited.colors.text
+background.solid: $inherited.colors.text
+height.fixed.px: 4
+width.fixed.px: 4
+
+-- end: ftd.row
+
+-- ftd.text: $post-card-ui-mobile.timestamp
+if: { post-card-ui-mobile.timestamp != NULL }
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: post-card-ui-mobile
