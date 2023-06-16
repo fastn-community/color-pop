@@ -179,4 +179,12 @@ asperiores tempore rem inventore nihil.Quo praesentium sapiente vel soluta
 assumenda et omnis doloremque est beatae voluptatem! Eum delectus dolorum et
 animi consectetur est asperiores tempore rem inventore nihil.
 
+-- blog.posts: More Blog
+min-width: true
+
+-- blog.post-card:
+post-data: $meta1
+
+-- end: blog.posts
+
 -- end: my-ds.page
