@@ -11,8 +11,8 @@ favicon: /-/fastn-community.github.io/color-pop/favicon.ico
 
 -- fastn.sitemap:
 
-# Home: /
+# Blog: /
+
+## Sample Post: /blog-articles/sample-post-1/
 
 # About: /
-
-# Blog: /

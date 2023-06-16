@@ -1,6 +1,6 @@
 -- import: fastn-community.github.io/color-pop/common
 -- import: fastn-community.github.io/color-pop/blog-articles/sample-post-1
-
+-- import: fastn/processors as pr
 
 
 
@@ -368,3 +368,421 @@ if: { post-card-ui-mobile.timestamp != NULL }
 -- end: ftd.column
 
 -- end: post-card-ui-mobile
+
+
+
+
+
+
+
+
+
+
+-- component footer:
+string copyright: Copyright ©2022. Fastn Inc.
+optional ftd.image-src site-logo: 
+integer logo-width: $common.logo-width
+integer logo-height: $common.logo-height
+optional string site-url: $common.site-url
+optional string site-name: 
+pr.toc-item list footer-links: $common.footer-toc.sections
+optional body body:
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.desktop:
+
+-- footer-desktop:
+copyright: $footer.copyright
+site-logo: $footer.site-logo
+logo-width: $footer.logo-width
+logo-height: $footer.logo-height
+site-url: $footer.site-url
+site-name: $footer.site-name
+footer-links: $footer.footer-links
+body: $footer.body
+
+-- end: ftd.desktop
+
+-- ftd.mobile:
+
+-- footer-mobile:
+copyright: $footer.copyright
+site-logo: $footer.site-logo
+logo-width: $footer.logo-width
+logo-height: $footer.logo-height
+site-url: $footer.site-url
+site-name: $footer.site-name
+footer-links: $footer.footer-links
+body: $footer.body
+
+-- end: ftd.mobile
+
+-- end: ftd.column
+
+-- end: footer
+
+
+
+
+
+
+
+
+
+
+-- component footer-desktop:
+optional body body: 
+string copyright:
+optional ftd.image-src site-logo: 
+integer logo-width: 
+integer logo-height: 
+optional string site-url: 
+optional string site-name:
+pr.toc-item list footer-links: 
+
+-- ftd.row:
+border-color: $inherited.colors.border
+border-top-width.px: 1
+width: fill-container
+align-content: center
+
+-- ftd.row:
+max-width.fixed.percent: 85
+width: fill-container
+align-self: center
+padding-top.px: 42
+padding-bottom.px: 62
+color: $inherited.colors.text
+background.solid: $inherited.colors.background.base
+spacing: space-between
+
+-- ftd.column:
+
+-- ftd.row:
+link: $footer-desktop.site-url
+align-content: center
+margin-bottom.px: 24
+
+-- ftd.image:
+if: { footer-desktop.site-logo != NULL }
+src: $footer-desktop.site-logo
+width.fixed.px: $footer-desktop.logo-width
+height.fixed.px: $footer-desktop.logo-height
+align-self: center
+
+-- ftd.text: $footer-desktop.site-name
+if: { footer-desktop.site-name != NULL }
+role: $inherited.types.heading-medium
+color: $inherited.colors.text-strong
+white-space: nowrap
+align-self: center
+
+-- fallback-title:
+if: { footer-desktop.site-logo == NULL }
+site-name: $footer-desktop.site-name
+
+-- end: ftd.row
+
+-- ftd.text:
+if: { footer-desktop.body != NULL }
+role: $inherited.types.copy-small
+width: fill-container
+max-width.fixed.percent: 50
+margin-bottom.px: 24
+
+$footer-desktop.body
+
+-- ftd.text: $footer-desktop.copyright
+role: $inherited.types.fine-print
+width: fill-container
+
+-- end: ftd.column
+
+-- ftd.row:
+width.fixed.percent: 70
+spacing: space-between
+
+-- footer-list: $obj.title
+url: $obj.url
+is-active: $obj.is-active
+children: $obj.children
+$loop$: $footer-desktop.footer-links as $obj
+
+-- end: ftd.row
+
+-- end: ftd.row
+
+-- end: ftd.row
+
+-- end: footer-desktop
+
+
+
+
+
+
+
+
+
+
+-- component footer-list:
+caption title:
+optional string url:
+boolean is-active:
+pr.toc-item list children:
+
+-- ftd.column:
+spacing.fixed.px: 6
+
+-- ftd.text: $footer-list.title
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+link: $footer-list.url
+width: fill-container
+style: bold
+
+-- footer-list-child: $obj.title
+if: { !ftd.is_empty(footer-list.children) }
+url: $obj.url
+is-active: $obj.is-active
+children: $obj.children
+$loop$: $footer-list.children as $obj
+
+-- end: ftd.column
+
+-- end: footer-list
+
+
+
+
+
+
+
+
+
+
+-- component footer-list-child:
+caption title:
+optional string url:
+boolean is-active:
+pr.toc-item list children:
+
+-- ftd.column:
+
+-- ftd.text: $footer-list-child.title
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+link: $footer-list-child.url
+width: fill-container
+
+-- footer-list-child: $obj.title
+if: { !ftd.is_empty(footer-list-child.children) }
+url: $obj.url
+is-active: $obj.is-active
+children: $obj.children
+$loop$: $footer-list-child.children as $obj
+
+-- end: ftd.column
+
+-- end: footer-list-child
+
+
+
+
+
+
+
+
+
+
+-- component footer-mobile:
+optional body body:
+string copyright: 
+optional ftd.image-src site-logo: 
+integer logo-width: 
+integer logo-height:
+optional string site-url: 
+optional string site-name: 
+pr.toc-item list footer-links: 
+common.social-media list social-links:
+
+-- ftd.column:
+width: fill-container
+padding-top.px: 48
+padding-bottom.px: 84
+color: $inherited.colors.text
+padding-horizontal.px: 24
+
+-- footer-mobile-list: $obj.title
+url: $obj.url
+is-active: $obj.is-active
+children: $obj.children
+$loop$: $footer-mobile.footer-links as $obj
+
+-- ftd.row:
+link: $footer-mobile.site-url
+align-content: center
+margin-vertical.px: 24
+
+-- ftd.image:
+if: { footer-mobile.site-logo != NULL }
+src: $footer-mobile.site-logo
+width.fixed.px: $footer-mobile.logo-width
+height.fixed.px: $footer-mobile.logo-height
+align-self: center
+
+-- ftd.text: $footer-mobile.site-name
+if: { footer-mobile.site-name != NULL }
+role: $inherited.types.heading-medium
+color: $inherited.colors.text
+white-space: nowrap
+align-self: center
+
+-- fallback-title:
+if: { footer-mobile.site-logo == NULL }
+site-name: $footer-mobile.site-name
+
+-- end: ftd.row
+
+-- ftd.text:
+if: { footer-mobile.body != NULL }
+role: $inherited.types.copy-small
+width: fill-container
+margin-bottom.px: 24
+
+$footer-mobile.body
+
+-- ftd.text: $footer-mobile.copyright
+role: $inherited.types.fine-print
+width: fill-container
+
+-- end: ftd.column
+
+-- end: footer-mobile
+
+
+
+
+
+
+
+
+
+
+-- component footer-mobile-list:
+caption title:
+string url:
+boolean $shows-data: false
+boolean is-active: false
+pr.toc-item list children: 
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 14
+
+-- ftd.column:
+border-color: $inherited.colors.border-strong
+border-bottom-width.px: 1
+width: fill-container
+padding-vertical.px: 16
+padding-horizontal.px: 16
+
+-- ftd.row:
+width: fill-container
+
+-- ftd.text: $footer-mobile-list.title
+role: $inherited.types.heading-tiny
+width: fill-container
+color: $inherited.colors.text-strong
+link: $footer-mobile-list.url
+
+-- ftd.image:
+if: { footer-mobile-list.shows-data }
+src: $assets.files.static.drop-up.svg
+width.fixed.px: 16
+$on-click$: $ftd.toggle($a= $footer-mobile-list.shows-data)
+align-self: center
+
+-- ftd.image:
+if: { !footer-mobile-list.shows-data }
+src: $assets.files.static.drop-down.svg
+width.fixed.px: 16
+$on-click$: $ftd.toggle($a= $footer-mobile-list.shows-data)
+align-self: center
+
+-- end: ftd.row
+
+-- ftd.column:
+if: { footer-mobile-list.shows-data }
+spacing.fixed.px: 14
+margin-top.px: 24
+
+-- footer-list-toc: 
+title: $obj.title
+url: $obj.url
+is-active: $obj.is-active
+children: $obj.children
+$loop$: $footer-mobile-list.children as $obj
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: footer-mobile-list
+
+
+
+
+
+
+
+
+
+
+-- component footer-list-toc:
+caption title:
+optional string url: index.html
+boolean is-active: false
+children wrap:
+pr.toc-item list children: 
+
+-- ftd.column:
+role: $inherited.types.copy-regular
+
+-- ftd.text: $footer-list-toc.title
+color: $inherited.colors.text
+link: $footer-list-toc.url
+width: fill-container
+white-space: nowrap
+margin-bottom.px: 12
+
+-- end: ftd.column
+
+-- end: footer-list-toc
+
+
+
+
+
+
+
+
+
+
+-- component fallback-title:
+optional string site-name:
+
+-- ftd.row:
+
+-- ftd.text: LOGO
+if: { fallback-title.site-name == NULL }
+role: $inherited.types.heading-large
+color: $inherited.colors.text
+
+-- end: ftd.row
+
+-- end: fallback-title

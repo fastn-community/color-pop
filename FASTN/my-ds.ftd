@@ -38,6 +38,15 @@ github-icon: true
 
 -- ds.page.footer:
 
+-- blog.footer:
+site-logo: $common.site-logo
+site-url: $common.site-url 
+logo-width: $common.logo-width
+logo-height: $common.logo-height
+footer-links: $common.footer-links
+
+I’m surprised you had the courage to take the responsibility yourself. Leave 
+that to me.
 
 -- end: ds.page.footer
 
