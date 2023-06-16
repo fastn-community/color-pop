@@ -180,7 +180,6 @@ assumenda et omnis doloremque est beatae voluptatem! Eum delectus dolorum et
 animi consectetur est asperiores tempore rem inventore nihil.
 
 -- blog.posts: More Blog
-min-width: true
 
 -- blog.post-card:
 post-data: $meta1

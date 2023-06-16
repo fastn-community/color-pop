@@ -44,7 +44,6 @@ optional caption title:
 optional body body:
 children container:
 optional string sub-heading:
-boolean min-width: false
 
 -- ftd.column:
 width: fill-container
