@@ -1,0 +1,126 @@
+-- import: fastn/processors as pr
+
+
+-- integer logo-width: 180
+
+-- integer logo-height: 44
+
+-- string site-name: My Blog
+
+-- string site-url: index.html
+
+-- ftd.image-src site-logo: $assets.files.assets.ipsum-logo.svg
+
+
+-- pr.sitemap-data footer-toc:
+$processor$: pr.full-sitemap
+
+
+
+
+
+
+-- record social-media:
+ftd.image-src src:
+string link: /
+
+-- social-media list share:
+
+
+
+
+-- record tags-list:
+caption title:
+string tag-link:
+
+-- tags-list list topic-lists:
+
+-- tags-list: Lorem1
+tag-link: /
+
+-- tags-list: Lorem2
+tag-link: /
+
+-- tags-list: Lorem3
+tag-link: /
+
+-- tags-list: Lorem4
+tag-link: /
+
+-- tags-list: Lorem5
+tag-link: /
+
+-- tags-list: Lorem6
+tag-link: /
+
+-- end: topic-lists
+
+
+
+
+
+-- record author-meta:
+optional caption title:
+optional string profile:
+optional string company:
+optional string bio-url:
+optional ftd.image-src image:
+optional body body:
+
+-- record post-meta:
+optional caption title: 
+optional string published-on:
+optional string tag:
+optional ftd.image-src post-image:
+optional body body:
+optional string post-url:
+optional author-meta author:
+
+
+
+
+
+-- social-media list share-links:
+
+-- social-media:
+link: /
+src: $assets.files.assets.meta.svg
+
+-- social-media: 
+link: /
+src: $assets.files.assets.figma.svg
+
+-- social-media:
+link: /
+src: $assets.files.assets.google.svg
+
+-- social-media: 
+link: /
+src: $assets.files.assets.ball.svg
+
+-- end: share-links
+
+
+
+
+
+-- pr.toc-item list footer-links:
+$processor$: pr.toc
+
+- Heading1: index.html
+  - Footer link 1: /
+  - Footer link 2: /
+  - Footer link 3: /
+  - Footer link 4: /
+- Heading2: index.html
+  - Footer link 1: /
+  - Footer link 2: /
+  - Footer link 3: /
+- Heading3: index.html
+  - Footer link 1: /
+  - Footer link 2: /
+  - Footer link 3: /
+- Heading4: index.html
+  - Footer link 1: /
+  - Footer link 2: /
+  - Footer link 3: /
