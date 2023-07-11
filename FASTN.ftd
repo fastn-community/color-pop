@@ -3,9 +3,13 @@
 -- fastn.package: fastn-community.github.io/color-pop
 favicon: /-/fastn-community.github.io/color-pop/favicon.ico
 
+<<<<<<< Updated upstream
 
 -- fastn.dependency: fastn-community.github.io/doc-site as ds
 -- fastn.dependency: fastn-community.github.io/footer
+=======
+-- fastn.dependency: fastn-community.github.io/midnight-storm as ds
+>>>>>>> Stashed changes
 
 -- fastn.auto-import: ds
 -- fastn.auto-import: fastn-community.github.io/color-pop/FASTN/my-ds
