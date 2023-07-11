@@ -130,6 +130,7 @@ optional common.author-meta author:
 optional ftd.image-src image:
 optional string url:
 optional string tag:
+children container:
 
 -- ftd.column:
 color: $inherited.colors.text
@@ -196,6 +197,7 @@ image: $post-card.post-data.post-image
 author: $post-card.post-data.author
 url: $post-card.post-data.post-url
 tag: $post-card.post-data.tag
+body: $post-card.post-data.body
 
 -- end: post-card
 
@@ -215,6 +217,7 @@ optional common.author-meta author:
 optional ftd.image-src image:
 optional string url:
 optional string tag:
+optional body body:
 
 -- ftd.column:
 
@@ -1209,6 +1212,7 @@ optional common.author-meta author:
 optional ftd.image-src image:
 optional string link:
 optional string tag:
+optional body body:
 optional string info:
 optional string cta-primary: 
 optional string cta-primary-url:
