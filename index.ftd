@@ -102,7 +102,7 @@ width: fill-container
 -- article-card: $post.meta.title
 image: $post.meta.post-image
 author: $post.meta.author
-timestamp: $post.meta.timestamp
+timestamp: $post.meta.published-on
 tag: $post.meta.tag
 
 -- ftd.column:
@@ -191,7 +191,7 @@ height: hug-content
 common.post-meta post-data:
 
 -- post-card-ui: $post-card.post-data.title
-timestamp: $post-card.post-data.timestamp
+timestamp: $post-card.post-data.published-on
 image: $post-card.post-data.post-image
 author: $post-card.post-data.author
 url: $post-card.post-data.post-url
@@ -704,14 +704,14 @@ link: $footer-mobile-list.url
 
 -- ftd.image:
 if: { footer-mobile-list.shows-data }
-src: $assets.files.static.drop-up.svg
+src: $assets.files.assets.drop-up.svg
 width.fixed.px: 16
 $on-click$: $ftd.toggle($a= $footer-mobile-list.shows-data)
 align-self: center
 
 -- ftd.image:
 if: { !footer-mobile-list.shows-data }
-src: $assets.files.static.drop-down.svg
+src: $assets.files.assets.down.svg
 width.fixed.px: 16
 $on-click$: $ftd.toggle($a= $footer-mobile-list.shows-data)
 align-self: center
