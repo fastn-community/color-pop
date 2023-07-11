@@ -38,8 +38,7 @@ You are one click away, just check [our documentation](https://fastn.com/) and
 dont forget to jump into our [FifthTry Discord server](https://discord.gg/bucrdvptYd).
 
 -- end: my-ds.page
-<<<<<<< Updated upstream
-=======
+
 
 
 
@@ -1415,4 +1414,3 @@ if: { featured-post-card-mobile.published-on != NULL }
 -- end: ftd.column
 
 -- end: featured-post-card-mobile
->>>>>>> Stashed changes
