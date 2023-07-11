@@ -1,44 +1,31 @@
--- my-ds.page: Welcome to doc-site
+-- import: fastn-community.github.io/color-pop/common
+-- import: fastn-community.github.io/color-pop/blog-articles/sample-post-1
+-- import: fastn/processors as pr
 
 
-⚡️ `doc-site` will help you create a beautiful documentation site in no time.
-
-It provides out-of-the-box documentation features that can be used to create any
-kind of site(personal website, blog, etc).
-
-[Click here](https://fastn-community.github.io/doc-site/) to read doc-site
-documentation.
-
--- ds.h3: 🚀 Fast Track 
-
-Create your first fastn [web-site](https://fastn.com/expander/hello-world/-/build/) 
-project in just 5 minutes!
-
--- ds.h3: 🌟 Whats next?
-
-Create your first page. 
-[Click here to know more](https://fastn-community.github.io/doc-site/page/).
-
--- ds.h3: 👀 Want to learn more?
-
-Feel free to check [our expander course](https://fastn.com/expander/) or jump
-into our [FifthTry Discord server](https://discord.gg/bucrdvptYd).
 
 
--- ds.h3: 🎯 Used by?
+-- my-ds.page:
+full-width: true
+sidebar: false
 
-Our all documentation sites uses this `doc-site` theme.
+-- posts: Blog
 
-- [fastn.com](https://fastn.com/home/)
-- [FifthTry.com](https://www.fifthtry.com/)
+-- post-card:
+post-data: $sample-post-1.meta1
 
--- ds.h2: Learn fastn and become a pro?
+-- post-card:
+post-data: $sample-post-1.meta2
 
-You are one click away, just check [our documentation](https://fastn.com/) and 
-dont forget to jump into our [FifthTry Discord server](https://discord.gg/bucrdvptYd).
+-- post-card:
+post-data: $sample-post-1.meta1
+
+-- post-card:
+post-data: $sample-post-1.meta2
+
+-- end: posts
 
 -- end: my-ds.page
-
 
 
 
@@ -115,7 +102,7 @@ width: fill-container
 -- article-card: $post.meta.title
 image: $post.meta.post-image
 author: $post.meta.author
-published-on: $post.meta.published-on
+timestamp: $post.meta.timestamp
 tag: $post.meta.tag
 
 -- ftd.column:
@@ -138,12 +125,11 @@ children: $post.container
 
 -- component article-card:
 caption title:
-optional string published-on:
+optional string timestamp:
 optional common.author-meta author:
 optional ftd.image-src image:
 optional string url:
 optional string tag:
-children container:
 
 -- ftd.column:
 color: $inherited.colors.text
@@ -177,8 +163,8 @@ width.fixed.px: 4
 
 -- end: ftd.row
 
--- ftd.text: $article-card.published-on
-if: { article-card.published-on != NULL }
+-- ftd.text: $article-card.timestamp
+if: { article-card.timestamp != NULL }
 
 -- end: ftd.row
 
@@ -205,12 +191,11 @@ height: hug-content
 common.post-meta post-data:
 
 -- post-card-ui: $post-card.post-data.title
-published-on: $post-card.post-data.published-on
+timestamp: $post-card.post-data.timestamp
 image: $post-card.post-data.post-image
 author: $post-card.post-data.author
 url: $post-card.post-data.post-url
 tag: $post-card.post-data.tag
-body: $post-card.post-data.body
 
 -- end: post-card
 
@@ -225,19 +210,18 @@ body: $post-card.post-data.body
 
 -- component post-card-ui:
 caption title:
-optional string published-on:
+optional string timestamp:
 optional common.author-meta author:
 optional ftd.image-src image:
 optional string url:
 optional string tag:
-optional body body:
 
 -- ftd.column:
 
 -- ftd.desktop:
 
 -- post-card-ui-desktop: $post-card-ui.title
-published-on: $post-card-ui.published-on
+timestamp: $post-card-ui.timestamp
 image: $post-card-ui.image
 author: $post-card-ui.author
 url: $post-card-ui.url
@@ -248,7 +232,7 @@ tag: $post-card-ui.tag
 -- ftd.mobile:
 
 -- post-card-ui-mobile: $post-card-ui.title
-published-on: $post-card-ui.published-on
+timestamp: $post-card-ui.timestamp
 image: $post-card-ui.image
 author: $post-card-ui.author
 url: $post-card-ui.url
@@ -270,7 +254,7 @@ url: $post-card-ui.url
 
 -- component post-card-ui-desktop:
 caption title:
-optional string published-on:
+optional string timestamp:
 optional common.author-meta author:
 optional ftd.image-src image:
 optional string url:
@@ -316,8 +300,8 @@ width.fixed.px: 4
 
 -- end: ftd.row
 
--- ftd.text: $post-card-ui-desktop.published-on
-if: { post-card-ui-desktop.published-on != NULL }
+-- ftd.text: $post-card-ui-desktop.timestamp
+if: { post-card-ui-desktop.timestamp != NULL }
 
 -- end: ftd.row
 
@@ -336,7 +320,7 @@ if: { post-card-ui-desktop.published-on != NULL }
 
 -- component post-card-ui-mobile:
 caption title:
-optional string published-on:
+optional string timestamp:
 optional common.author-meta author:
 optional ftd.image-src image:
 optional string url:
@@ -380,8 +364,8 @@ width.fixed.px: 4
 
 -- end: ftd.row
 
--- ftd.text: $post-card-ui-mobile.published-on
-if: { post-card-ui-mobile.published-on != NULL }
+-- ftd.text: $post-card-ui-mobile.timestamp
+if: { post-card-ui-mobile.timestamp != NULL }
 
 -- end: ftd.row
 
@@ -720,14 +704,14 @@ link: $footer-mobile-list.url
 
 -- ftd.image:
 if: { footer-mobile-list.shows-data }
-src: $assets.files.assets.drop-up.svg
+src: $assets.files.static.drop-up.svg
 width.fixed.px: 16
 $on-click$: $ftd.toggle($a= $footer-mobile-list.shows-data)
 align-self: center
 
 -- ftd.image:
 if: { !footer-mobile-list.shows-data }
-src: $assets.files.assets.down.svg
+src: $assets.files.static.drop-down.svg
 width.fixed.px: 16
 $on-click$: $ftd.toggle($a= $footer-mobile-list.shows-data)
 align-self: center
@@ -1192,7 +1176,7 @@ optional string link:
 width: fill-container
 
 -- featured-post-card: $featured-post.post-data.title
-published-on: $featured-post.post-data.published-on
+timestamp: $featured-post.post-data.published-on
 author: $featured-post.post-data.author
 image: $featured-post.post-data.post-image
 url: $featured-post.post-data.post-url
@@ -1220,12 +1204,11 @@ link: $featured-post.link
 
 -- component featured-post-card:
 caption title:
-optional string published-on:
+optional string timestamp:
 optional common.author-meta author:
 optional ftd.image-src image:
 optional string link:
 optional string tag:
-optional body body:
 optional string info:
 optional string cta-primary: 
 optional string cta-primary-url:
@@ -1240,7 +1223,7 @@ width: fill-container
 -- ftd.desktop:
 
 -- featured-post-card-desktop: $featured-post-card.title
-published-on: $featured-post-card.published-on
+timestamp: $featured-post-card.timestamp
 author: $featured-post-card.author
 image: $featured-post-card.image
 url: $featured-post-card.url
@@ -1251,7 +1234,7 @@ tag: $featured-post-card.tag
 -- ftd.mobile:
 
 -- featured-post-card-mobile: $featured-post-card.title
-published-on: $featured-post-card.published-on
+timestamp: $featured-post-card.timestamp
 author: $featured-post-card.author
 image: $featured-post-card.image
 url: $featured-post-card.url
@@ -1274,7 +1257,7 @@ tag: $featured-post-card.tag
 
 -- component featured-post-card-desktop:
 caption title:
-optional string published-on:
+optional string timestamp:
 optional common.author-meta author:
 optional ftd.image-src image:
 optional string url:
@@ -1325,8 +1308,8 @@ spacing.fixed.px: 12
 src: $assets.files.assets.calendar.svg
 width: auto
 
--- ftd.text: $featured-post-card-desktop.published-on
-if: { featured-post-card-desktop.published-on != NULL }
+-- ftd.text: $featured-post-card-desktop.timestamp
+if: { featured-post-card-desktop.timestamp != NULL }
 
 -- end: ftd.row
 
@@ -1357,7 +1340,7 @@ link: $featured-post-card-desktop.url
 
 -- component featured-post-card-mobile:
 caption title:
-optional string published-on:
+optional string timestamp:
 optional common.author-meta author:
 optional ftd.image-src image:
 optional string url:
@@ -1406,8 +1389,8 @@ color: $inherited.colors.text
 src: $assets.files.assets.calendar.svg
 width: auto
 
--- ftd.text: $featured-post-card-mobile.published-on
-if: { featured-post-card-mobile.published-on != NULL }
+-- ftd.text: $featured-post-card-mobile.timestamp
+if: { featured-post-card-mobile.timestamp != NULL }
 
 -- end: ftd.row
 

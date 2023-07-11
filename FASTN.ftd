@@ -3,21 +3,18 @@
 -- fastn.package: fastn-community.github.io/color-pop
 favicon: /-/fastn-community.github.io/color-pop/favicon.ico
 
-<<<<<<< Updated upstream
-
 -- fastn.dependency: fastn-community.github.io/doc-site as ds
 -- fastn.dependency: fastn-community.github.io/footer
-=======
 -- fastn.dependency: fastn-community.github.io/midnight-storm as ds
->>>>>>> Stashed changes
 
 -- fastn.auto-import: ds
 -- fastn.auto-import: fastn-community.github.io/color-pop/FASTN/my-ds
 -- fastn.auto-import: fastn-community.github.io/color-pop/assets
 
-
 -- fastn.sitemap:
 
-# Home Page: /
+# Blog: /
 
-- Page with Right Sidebar: /sidebar/
+## Sample Post: /blog-articles/sample-post-1/
+
+# About: /
