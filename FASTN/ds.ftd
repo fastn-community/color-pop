@@ -1,8 +1,9 @@
--- import: ds
 -- import: fastn-community.github.io/color-pop/common
--- import: fastn-community.github.io/color-pop as blog
-
-
+-- import: fastn-community.github.io/color-pop-cs
+-- import: fastn-community.github.io/color-pop
+export: post, posts, post-card, footer, author-bio
+-- import: fastn-community.github.io/midnight-storm
+export: h0, h1, h2, h3, markdown, code, image, link, link-group, toc-title, rendered, letter, letter-data, letter-bar, letter-category, letter-stack
 
 -- component page:
 children wrapper:
@@ -20,7 +21,7 @@ boolean full-width: false
 boolean blog: false
 ftd.ui list hero:
 
--- ds.page: $page.title
+-- midnight-storm.page: $page.title
 site-logo: $page.site-logo
 site-url: $page.site-url
 body: $page.body
@@ -32,13 +33,14 @@ document-title: $page.document-title
 document-description: $page.document-description
 document-image: $page.document-image
 blog: $page.blog
+colors: $color-pop-cs.main
 hero: $page.hero
 github-url: https://github.com/fastn-community/color-pop/
 github-icon: true
 
--- ds.page.footer:
+-- midnight-storm.page.footer:
 
--- blog.footer:
+-- color-pop.footer:
 site-logo: $common.site-logo
 site-url: $common.site-url 
 logo-width: $common.logo-width
@@ -48,7 +50,7 @@ footer-links: $common.footer-links
 I’m surprised you had the courage to take the responsibility yourself. Leave 
 that to me.
 
--- end: ds.page.footer
+-- end: midnight-storm.page.footer
 
 -- ftd.column:
 spacing.fixed.px: 24
@@ -57,6 +59,6 @@ children: $page.wrapper
 
 -- end: ftd.column
 
--- end: ds.page
+-- end: midnight-storm.page
 
 -- end: page

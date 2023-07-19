@@ -3,18 +3,26 @@
 -- fastn.package: fastn-community.github.io/color-pop
 favicon: /-/fastn-community.github.io/color-pop/favicon.ico
 
--- fastn.dependency: fastn-community.github.io/doc-site as ds
--- fastn.dependency: fastn-community.github.io/footer
--- fastn.dependency: fastn-community.github.io/midnight-storm as ds
+-- fastn.dependency: fastn-community.github.io/midnight-storm
+-- fastn.dependency: fastn-community.github.io/color-pop-cs
+-- fastn.dependency: fastn-community.github.io/bling
 
--- fastn.auto-import: ds
--- fastn.auto-import: fastn-community.github.io/color-pop/FASTN/my-ds
+-- fastn.auto-import: fastn
+-- fastn.auto-import: fastn-community.github.io/color-pop/FASTN/ds
 -- fastn.auto-import: fastn-community.github.io/color-pop/assets
 
 -- fastn.sitemap:
 
-# Blog: /index.html
+# Blog: index.html
 
-## Sample Post: blog-articles/sample-post-1/
-
-# About: /index.html
+# Docs: /components/
+- Docs Components: /components/
+  - author-bio: /components/author-bio/
+  skip: true
+  - post: /components/post/
+  skip: true
+  - post-card: /components/post-card/
+  skip: true
+  - posts: /components/posts/
+  skip: true
+  
