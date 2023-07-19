@@ -5,7 +5,7 @@
 
 
 
--- my-ds.page:
+-- ds.page:
 full-width: true
 sidebar: false
 
@@ -25,7 +25,7 @@ post-data: $sample-post-1.meta2
 
 -- end: posts
 
--- end: my-ds.page
+-- end: ds.page
 
 
 
@@ -1275,7 +1275,6 @@ width: fill-container
 spacing: space-between
 
 -- ftd.column:
-width.fixed.px: 480
 spacing.fixed.px: 24
 
 -- ftd.text: $featured-post-card-desktop.tag
@@ -1315,13 +1314,20 @@ if: { featured-post-card-desktop.timestamp != NULL }
 
 -- end: ftd.column
 
--- ftd.image:
-src: $featured-post-card-desktop.image
-height.fixed.px: 350
+-- ftd.column:
+width: fill-container
 border-radius.px: 14
 border-width.px: 2
 border-color: $inherited.colors.cta-danger.border
 link: $featured-post-card-desktop.url
+
+-- ftd.image:
+src: $featured-post-card-desktop.image
+width: fill-container
+height: auto
+border-radius.px: 14
+
+-- end: ftd.column
 
 -- end: ftd.row
 

@@ -1,6 +1,10 @@
-# blog-template Change Log
+# color-pop Change Log
 
-## June 13, 2023
+## June 16, 2023
 
-- [initial commit](https://github.com/fastn-community/blog-template/commit/5909fc715e7b073f64ecfcd140e10ad3b5f01a26)
+- [initial commit](https://github.com/fastn-community/color-pop/commit/7f107d7d66948b73a4938096d67e28527c17a0dd)
+
+## June 23, 2023
+
+- [initial commit](https://github.com/fastn-community/color-pop/commit/5bf90a7375067b2865e8743de50e92ea42b28e5a)
 
