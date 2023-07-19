@@ -1,0 +1,70 @@
+-- import: fastn-community.github.io/color-pop/components
+-- import: fastn-community.github.io/color-pop/blog-articles/sample-post-1 
+
+
+-- ds.page: post-card
+document-title: fastn blog Template. Build Your Own Website with Ease
+document-description: Simple, easy-to-use color-pop template to build your own documentation website, personal website, or blog. Change colours and typography effortlessly.
+document-image: https://fastn-community.github.io/color-pop/-/fastn-community.github.io/color-pop/assets/color-pop-og-image.jpg
+sidebar: true
+
+-- ds.page.right-sidebar:
+
+-- components.sidebar-index:
+
+-- end: ds.page.right-sidebar
+
+-- ds.page.body:
+
+`ds.post-card` can be used to show blog/article meta as a post-card.
+To see it in action - [Click here](index.html).
+
+-- ds.h2: Example:
+
+-- ds.rendered:
+
+-- ds.rendered.input:
+
+\-- common.post-meta meta1: Quo praesentium sapiente vel soluta assumenda et
+tag: Lorem ipsum
+author: patricapatrica
+published-on: May 18, 6 min
+post-image: $assets.files.assets.post1.jpg
+post-url: blog-articles/sample-post-1/
+
+\-- ds.post-card:
+post-data: $sample-post-1.meta1
+
+-- ds.rendered.output:
+
+-- ds.post-card:
+post-data: $sample-post-1.meta
+
+-- end: ds.rendered.output
+
+
+-- end: ds.rendered
+
+-- ds.code:
+lang: ftd
+
+\-- ds.post-card:
+post-data: $sample-post-1.meta
+
+-- ds.h3: Properties of `post-card` component
+
+- **post-data** - `type: record` use `common.post-meta` record to create
+    featured post of your blog post as shown in below code snippet. 
+    To see it in featured posts page - [Click here](index.html).
+
+-- ds.code:
+lang: ftd
+
+\-- common.post-meta meta1: Quo praesentium sapiente vel soluta assumenda et
+tag: Lorem ipsum
+author: $patrica.patrica
+published-on: May 18, 6 min
+post-image: $assets.files.assets.featured-1.jpg
+post-url: blog-articles/sample-post-1/
+
+-- end: ds.page
