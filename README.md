@@ -7,7 +7,7 @@ It provides out-of-the-box blog features that can be used to create blog(persona
 
 # Preview
 
-![color-pop](.github/assets/color-pop-og-image.jpg)
+![color-pop](assets/color-pop-og-image.jpg)
 
 ## Get Rolling
 
