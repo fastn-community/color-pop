@@ -10,13 +10,14 @@ favicon: /-/fastn-community.github.io/color-pop/favicon.ico
 -- fastn.auto-import: fastn
 -- fastn.auto-import: fastn-community.github.io/color-pop/FASTN/ds
 -- fastn.auto-import: fastn-community.github.io/color-pop/assets
+-- fastn.auto-import: fastn-community.github.io/color-pop/common
 
 -- fastn.sitemap:
 
 # Blog: index.html
 
 # Docs: /components/
-- Docs Components: /components/
+- Components: /components/
   - author-bio: /components/author-bio/
   skip: true
   - post: /components/post/

@@ -1,33 +1,27 @@
--- import: fastn-community.github.io/color-pop/common
--- import: fastn-community.github.io/color-pop/blog-articles/sample-post-1
 -- import: fastn/processors as pr
-
-
-
+-- import: fastn-community.github.io/color-pop/blog-articles/sample-post-1
 
 -- ds.page:
 full-width: true
 sidebar: false
 
--- posts: Blog
+-- ds.posts: Blog
 
--- post-card:
+-- ds.post-card:
 post-data: $sample-post-1.meta1
 
--- post-card:
+-- ds.post-card:
 post-data: $sample-post-1.meta2
 
--- post-card:
+-- ds.post-card:
 post-data: $sample-post-1.meta1
 
--- post-card:
+-- ds.post-card:
 post-data: $sample-post-1.meta2
 
--- end: posts
+-- end: ds.posts
 
 -- end: ds.page
-
-
 
 
 
@@ -1187,7 +1181,6 @@ cta-primary-url: $featured-post.cta-primary-url
 cta-secondary: $featured-post.cta-secondary
 cta-secondary-url: $featured-post.cta-secondary-url
 link: $featured-post.link
-
 
 -- end: ftd.column
 

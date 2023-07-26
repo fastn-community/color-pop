@@ -1,24 +1,22 @@
--- import: fastn-community.github.io/color-pop/common
--- import: fastn-community.github.io/color-pop as blog
--- import: fastn-community.github.io/color-pop/blog-authors/patrica as author
+-- import: fastn-community.github.io/color-pop/blog-authors/patrica
 
 -- common.post-meta meta: Lorem ipsum dolor sit amet. Est voluptatem esse
 tag: Lorem ipsum
-author: $author.patrica
+author: $patrica.patrica
 published-on: May 18, 6 min
 post-image: $assets.files.assets.post1.jpg
 post-url: blog-articles/sample-post-1/
 
 -- common.post-meta meta1: Quo praesentium sapiente vel soluta assumenda et
 tag: Lorem ipsum
-author: $author.patrica
+author: $patrica.patrica
 published-on: May 18, 6 min
 post-image: $assets.files.assets.post1.jpg
 post-url: blog-articles/sample-post-1/
 
 -- common.post-meta meta2: Eos libero natus est minima laudantium
 tag: Lorem ipsum
-author: $author.patrica
+author: $patrica.patrica
 published-on: May 18, 6 min
 post-image: $assets.files.assets.post2.jpg
 post-url: blog-articles/sample-post-1/
@@ -50,7 +48,7 @@ cta: blog-articles/sample-post-1/#wrap-up
 
 -- end: ds.page.right-sidebar
 
--- blog.post:
+-- ds.post:
 meta: $meta
 
 -- ds.markdown:
@@ -179,11 +177,11 @@ asperiores tempore rem inventore nihil.Quo praesentium sapiente vel soluta
 assumenda et omnis doloremque est beatae voluptatem! Eum delectus dolorum et
 animi consectetur est asperiores tempore rem inventore nihil.
 
--- blog.posts: More Blog
+-- ds.posts: More Blog
 
--- blog.post-card:
+-- ds.post-card:
 post-data: $meta1
 
--- end: blog.posts
+-- end: ds.posts
 
 -- end: ds.page

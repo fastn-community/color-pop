@@ -1,10 +1,6 @@
 -- import: fastn-community.github.io/color-pop/components
 -- import: fastn-community.github.io/bling/collapse
 
-
-
-
-
 -- ds.page: posts
 document-title: fastn Doc-Site Template. Build Your Own Website with Ease
 document-description: Simple, easy-to-use color-pop template to build your own documentation website, personal website, or blog. Change colours and typography effortlessly.
@@ -22,11 +18,11 @@ sidebar: true
 -- ds.h2: Creating posts list page
 
 It's very common to display a list of top/latest posts as a blog home page. Our
-`color-pop` blog feature helps you to create your favorite blog posts list home 
+`color-pop` blog feature helps you to create your favorite blog posts list home
 page.
 
-It's very simple to create your top/latest featured posts using `-- ds.posts` which
-can be added inside `-- ds.page`.
+It's very simple to create your top/latest featured posts using `-- ds.posts`
+which can be added inside `-- ds.page`.
 
 Let's learn how to create it.
 
@@ -82,13 +78,6 @@ info-right: Learn more: [`posts`](components/posts/)
 
 This line imports the `ds.posts` component which helps to create featured list
 page ui.
-
--- collapse.collapse: `-- ds.featured-post:`
-remove-gap: true
-info-right: Learn more: [`featured-post`](components/featured-post/)
-
-This line imports the `ds.featured-post` component which comes with featured
-post UI. [see our blog page](index.html)
 
 -- collapse.collapse: `-- ds.post-card`
 remove-gap: true

@@ -1,7 +1,6 @@
 -- import: fastn-community.github.io/color-pop/components
 -- import: fastn-community.github.io/color-pop/blog-articles/sample-post-1 
 
-
 -- ds.page: post-card
 document-title: fastn blog Template. Build Your Own Website with Ease
 document-description: Simple, easy-to-use color-pop template to build your own documentation website, personal website, or blog. Change colours and typography effortlessly.
@@ -41,7 +40,6 @@ post-data: $sample-post-1.meta1
 post-data: $sample-post-1.meta
 
 -- end: ds.rendered.output
-
 
 -- end: ds.rendered
 
