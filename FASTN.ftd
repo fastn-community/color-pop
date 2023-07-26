@@ -7,7 +7,6 @@ favicon: /-/fastn-community.github.io/color-pop/favicon.ico
 -- fastn.dependency: fastn-community.github.io/color-pop-cs
 -- fastn.dependency: fastn-community.github.io/bling
 
--- fastn.auto-import: fastn
 -- fastn.auto-import: fastn-community.github.io/color-pop/FASTN/ds
 -- fastn.auto-import: fastn-community.github.io/color-pop/assets
 -- fastn.auto-import: fastn-community.github.io/color-pop/common
