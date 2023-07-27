@@ -1,6 +1,9 @@
 -- import: fastn/processors as pr
 
 
+
+
+
 -- integer logo-width: 180
 
 -- integer logo-height: 44
@@ -11,10 +14,8 @@
 
 -- ftd.image-src site-logo: $assets.files.assets.ipsum-logo.svg
 
-
 -- pr.sitemap-data footer-toc:
 $processor$: pr.full-sitemap
-
 
 
 
@@ -25,6 +26,7 @@ ftd.image-src src:
 string link: /
 
 -- social-media list share:
+
 
 
 
