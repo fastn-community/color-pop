@@ -1,17 +1,11 @@
--- import: fastn-community.github.io/color-pop/common 
--- import: fastn-community.github.io/color-pop as blog
-
-
-
-
-
 -- common.author-meta patrica: Patrica AVA
 profile: UI Designer
-bio-url:  blog-authors/patrica/
+bio-url: blog-authors/patrica/
 image: $assets.files.assets.avatar.svg
 company: XVY Pvt. Ltd.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. 
 
 
 
@@ -20,7 +14,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 -- ds.page: 
 sidebar: false
 
--- blog.author-bio: 
+-- ds.author-bio: 
 author: $patrica
 
 -- end: ds.page
